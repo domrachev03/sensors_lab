@@ -1,0 +1,32 @@
+{
+    "image": "registry.gitlab.com/beerlab/iprofi2024/problem/bachelor/base-user-cuda:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "ms-iot.vscode-ros",
+                "ms-vscode.cpptools",
+                "ms-python.black-formatter",
+                "ms-python.flake8",
+                "VisualStudioExptTeam.vscodeintellicode",
+                "ms-vscode.cmake-tools"
+            ]
+        }
+    },
+    "runArgs": [
+        "-e", "DISPLAY=${env:DISPLAY}", 
+        "-e", "ROS_MASTER_URI=http://scene:11311",
+        "-e", "XAUTHORITY=${env:XAUTHORITY}", 
+        "-e", "QT_X11_NO_MITSHM=1", 
+        "-e", "GUI=true",
+        "-v", "/tmp/.X11-unix:/tmp/.X11-unix:rw",
+        "-v", "/etc/localtime:/etc/localtime:ro",
+        "-v", "/dev:/dev",
+        "--network", "bachelor_semifinal_general",
+        "--ipc", "host",
+        "--gpus","all"
+    ],
+    "workspaceMount": "type=bind,src=${localWorkspaceFolder},target=/ros_ws/src/bachelor",
+    "workspaceFolder": "/ros_ws/src/bachelor"
+}

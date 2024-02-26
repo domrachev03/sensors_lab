@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>sensors_lab</name>
+    <version>0.1.0</version>
+    <description>The solution for sensors lab, running SLAM over given rosbags</description>
+    <license>MIT</license>
+    <maintainer email="domrachev10@gmail.com">Domrachev Ivan</maintainer>
+
+    <exec_depend>message_runtime</exec_depend>
+    <buildtool_depend>catkin</buildtool_depend>
+    <build_depend>roscpp</build_depend>
+    <build_depend>rospy</build_depend>
+    <build_export_depend>roscpp</build_export_depend>
+    <build_export_depend>rospy</build_export_depend>
+    <exec_depend>roscpp</exec_depend>
+    <exec_depend>rospy</exec_depend>
+
+</package>
