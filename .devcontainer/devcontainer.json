@@ -1,5 +1,5 @@
 {
-    "image": "registry.gitlab.com/beerlab/iprofi2024/problem/bachelor/base-user-cuda:latest",
+    "image": "domrachev003/sensors-lab-ros:latest",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -15,18 +15,14 @@
         }
     },
     "runArgs": [
-        "-e", "DISPLAY=${env:DISPLAY}", 
-        "-e", "ROS_MASTER_URI=http://scene:11311",
+        "-e", "DISPLAY=${env:DISPLAY}",
         "-e", "XAUTHORITY=${env:XAUTHORITY}", 
-        "-e", "QT_X11_NO_MITSHM=1", 
-        "-e", "GUI=true",
+        "-e", "QT_X11_NO_MITSHM=1",
         "-v", "/tmp/.X11-unix:/tmp/.X11-unix:rw",
         "-v", "/etc/localtime:/etc/localtime:ro",
         "-v", "/dev:/dev",
-        "--network", "bachelor_semifinal_general",
         "--ipc", "host",
-        "--gpus","all"
     ],
-    "workspaceMount": "type=bind,src=${localWorkspaceFolder},target=/ros_ws/src/bachelor",
-    "workspaceFolder": "/ros_ws/src/bachelor"
+    "workspaceMount": "type=bind,src=${localWorkspaceFolder},target=/ros_ws/src/solution",
+    "workspaceFolder": "/ros_ws/src/solution"
 }
