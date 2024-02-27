@@ -3,7 +3,7 @@ name: 'sensors-lab'
 
 services:
   ros-docker:
-    image: test/docker_image 
+    image: domrachev003/sensors-lab-ros:latest 
     entrypoint: ["/bin/bash", "-ci", "source /opt/ros/noetic/setup.bash && cd /ros_ws && catkin build && source /ros_ws/devel/setup.bash && roslaunch sensors_lab solution.launch"]
     container_name: ros_noetic_container
     stdin_open: true

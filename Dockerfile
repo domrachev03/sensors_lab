@@ -18,6 +18,7 @@ RUN apt install --no-install-recommends -y \
     python3-catkin-tools \
     ros-noetic-slam-gmapping \
     ros-noetic-navigation \
+    ros-noetic-rviz \
     && rm -rf /var/lib/apt/lists/*
 
 ENV SHELL /bin/bash
