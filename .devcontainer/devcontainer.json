@@ -24,5 +24,6 @@
         "--ipc", "host",
     ],
     "workspaceMount": "type=bind,src=${localWorkspaceFolder},target=/ros_ws/src/solution",
-    "workspaceFolder": "/ros_ws/src/solution"
+    "workspaceFolder": "/ros_ws/src/solution",
+    "postStartCommand": "cd /ros_ws/src/solution && catkin build"
 }
