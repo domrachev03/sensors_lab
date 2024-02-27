@@ -1,0 +1,3 @@
+<launch>
+<node pkg="rosbag" type="play" name="player" output="screen" args="--clock $(find sensors_lab)/rosbags/laserscan.bag"/>
+</launch>
