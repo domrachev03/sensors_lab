@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find sensors_lab)/launch/rosbag.launch"/>
+    <!-- Add your nodes below -->
+</launch>
