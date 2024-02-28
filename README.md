@@ -25,11 +25,12 @@ There are three ways to use this repository.
 ## Lab task
 ### Task 1
 1. Select the room relative to which you will be capturing data. At least 2 walls in the room must be accessible.
-2. Connect to the lidar (either using topic `/camsense_scan` or via [this repo](https://github.com/IljaRukin/camsense_X1_lidar?tab=readme-ov-file)) capture 3+ frames of lidar data at different points in the room.
+2. Connect to the lidar (via [this repo](https://github.com/IljaRukin/camsense_X1_lidar?tab=readme-ov-file)) capture 3+ frames of lidar data at different points in the room.
 3. Combine the point clouds using the [ICP algorithm](https://github.com/pglira/simpleICP). Visualize the result obtained. Blue indicates the points you captured from the lidar, red indicates the points where the lidar was standing during the measurements.
 4. Run the [RANSAC](https://scikit-learn.org/stable/auto_examples/linear_model/plot_ransac.html) algorithm to detect walls on the resulting image.
 > Note: the ideal implementation would be using ROS nodes, because it would allow automaticall visualize it in `rviz` and you would implement RANSAC algorithm only once for both tasks.
-
+> 
+> Think about how you could collect data from the lidar and publish it as a scan message.
 ### Task 2
 1. Using this repository and the [rosbag file](https://drive.google.com/file/d/1lUPTX5NeEGetGuRORpGiRVaJvWjGmNnO/view?usp=sharing), run the 2D SLAM algorithm for reconstructing the room SLAM was performed into. The result should resemble the picture below. 
    1. Put the rosbag file in `rosbags` folder. 
@@ -43,4 +44,3 @@ There are three ways to use this repository.
 
 ## TODO list
 - [ ] Add node for connecting to Camsense lidar
-- [ ] Add rviz visualization
