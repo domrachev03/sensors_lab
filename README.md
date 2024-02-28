@@ -13,13 +13,14 @@ There are three ways to use this repository.
 
    To utilize it, you need to:
    1. Install VSCode and Devcontainer plugin inside it.
-   2. Press Ctrl+Shift+P and choose `Rebuild and reopen in container`
-   3. Open the terminal, and source the ROS environment (it is builded upon start): `source /ros_ws/devel/setup.bash`
+   2. Allow docker to connect to the screen: `xhost +`.
+   3. Press Ctrl+Shift+P and choose `Rebuild and reopen in container`.
+   4. Open the terminal, and source the ROS environment (it is builded upon start): `source /ros_ws/devel/setup.bash`.
 
    Done! Now you could use the environment and run the ROS code right inside the container. It would automaticall mount the repository there and save all the changes you would make.
 
 3. **Running docker-compsoe**
-   Finally, one could just run the docker compose via `docker-compose up`, which would automatically build the package and launch the `solution.launch` file.
+   Finally, one could just run the docker compose via `xhost +` and `docker-compose up`, which would automatically build the package and launch the `solution.launch` file.
 
 
 ## Lab task
